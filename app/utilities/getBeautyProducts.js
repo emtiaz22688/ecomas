@@ -1,4 +1,5 @@
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/products`;
+const API_URL = `${process.env.NEXTPUBLICAPIURL}/api/product-collection`;
+
 
 export default async function getBeautyProducts(params = {}) {
   const query = new URLSearchParams();

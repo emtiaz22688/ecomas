@@ -1,5 +1,4 @@
-// ১ নম্বর লাইনে সরাসরি পুরো লিঙ্ক না দিয়ে এনভায়রনমেন্ট ভেরিয়েবল ব্যবহার করুন
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/product-collection`;
+const API_URL = `${process.env.NEXTPUBLICAPIURL}/api/product-collection`;
 
 export async function getProductCollection() {
   try {

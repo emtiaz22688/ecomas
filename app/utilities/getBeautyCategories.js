@@ -1,5 +1,5 @@
-// ১ নম্বর লাইনে লোকালহোস্ট কেটে এনভায়রনমেন্ট ভেরিয়েবল বসানো হলো
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/beauty/categories`;
+const API_URL = `${process.env.NEXTPUBLICAPIURL}/api/beauty/categories`;
+
 
 export default async function getBeautyCategories() {
   try {

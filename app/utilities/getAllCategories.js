@@ -1,4 +1,5 @@
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/categories`;
+const API_URL = `${process.env.NEXTPUBLICAPIURL}/api/categories`;
+
 
 export const getCategories = async () => {
   try {
