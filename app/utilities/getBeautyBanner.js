@@ -1,5 +1,4 @@
-
-const API_URL = "https://ecomas-server.onrender.com/api/beauty/banner";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/beauty/banner`;
 
 export default async function getBeautyBanner() {
   try {

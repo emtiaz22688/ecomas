@@ -1,12 +1,11 @@
-import Link from "next/link";
 import { getProductCollection } from "../../utilities/getProductCollection";
 
 export default async function ProductCollection() {
   const products = await getProductCollection();
-  return (
-   <section className="relative -mt-24 sm:-mt-28 w-full bg-white pt-4 pb-12 sm:pt-6 sm:pb-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 g:px-8">
 
+  return (
+    <section className="relative -mt-24 w-full bg-white pt-4 pb-12 sm:-mt-28 sm:pt-6 sm:pb-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">
           <p className="mb-2 text-sm font-medium tracking-wide text-pink-500">
             Beauty Collection
@@ -46,7 +45,7 @@ export default async function ProductCollection() {
                 </p>
 
                 <p className="mt-auto text-lg font-medium text-pink-500">
-                  Save ${product.save}
+                  Save {product.currency} {product.save}
                 </p>
               </article>
             ))}

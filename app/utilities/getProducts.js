@@ -1,6 +1,4 @@
-
-
-const API_URL = "https://ecomas-server.onrender.com/api/products";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/products`;
 
 export default async function getProducts() {
   try {
@@ -13,11 +11,9 @@ export default async function getProducts() {
     }
 
     const result = await response.json();
-
     return result.data || [];
   } catch (error) {
     console.error("Failed to fetch products:", error);
     return [];
   }
 }
-

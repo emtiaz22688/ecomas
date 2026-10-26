@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/beauty/categories";
+// ১ নম্বর লাইনে লোকালহোস্ট কেটে এনভায়রনমেন্ট ভেরিয়েবল বসানো হলো
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/beauty/categories`;
 
 export default async function getBeautyCategories() {
   try {

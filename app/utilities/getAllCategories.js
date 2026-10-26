@@ -1,20 +1,19 @@
-const API_URL = "https://ecomas-server.onrender.com/api/categories";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/categories`;
 
 export const getCategories = async () => {
-    try {
-        const response = await fetch(API_URL, {
-            cache: "no-store",
-        });
+  try {
+    const response = await fetch(API_URL, {
+      cache: "no-store",
+    });
 
-        if (!response.ok) {
-            throw new Error("Failed to fetch categories");
-        }
-
-        const result = await response.json();
-
-        return result.data || [];
-    } catch (error) {
-        console.error("Categories API Error:", error);
-        return [];
+    if (!response.ok) {
+      throw new Error("Failed to fetch categories");
     }
+
+    const result = await response.json();
+    return result.data || [];
+  } catch (error) {
+    console.error("Categories API Error:", error);
+    return [];
+  }
 };
